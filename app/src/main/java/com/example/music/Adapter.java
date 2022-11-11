@@ -66,7 +66,7 @@ public class Adapter  extends BaseAdapter {
         Executor.setText(mask.getExecutor());
         Genre.setText(mask.getGenre());
         Duration.setText(mask.getDuration());
-        image.setImageBitmap(getUserImage(mask.get()));
+        image.setImageBitmap(getUserImage(mask.()));
 
 
         return v;
