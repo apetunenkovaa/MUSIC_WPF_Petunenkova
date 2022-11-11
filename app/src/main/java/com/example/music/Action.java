@@ -1,4 +1,6 @@
 package com.example.music;
+
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -29,7 +31,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;*/
 
-public class Edit extends AppCompatActivity {
+public class Action extends AppCompatActivity {
 
     Bundle arg;
     EditText Name;
@@ -56,8 +58,8 @@ public class Edit extends AppCompatActivity {
         Executor.setText(mask.getExecutor());
         Genre.setText(mask.getGenre());
         Duration.setText(mask.getDuration());
-        Image_D decodeImage = new Image_D(Edit.this);
-        Bitmap userImage = decodeImage.getUserImage(mask.getImage());
+        Image_D I_D = new Image_D(Action.this);
+        Bitmap userImage = I_D.getUserImage(mask.getImage());
         Img.setImageBitmap(userImage);
         if(!mask.getImage().equals("null")){
             bm = userImage;
@@ -91,7 +93,7 @@ public class Edit extends AppCompatActivity {
         }
         catch (Exception ex)
         {
-            Toast.makeText(Edit.this, "Что-то пошло не так!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Action.this, "Что-то пошло не так!", Toast.LENGTH_SHORT).show();
         }
     }
 

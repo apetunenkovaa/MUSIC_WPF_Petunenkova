@@ -37,15 +37,11 @@ public class General extends AppCompatActivity {
         protected String doInBackground(Void... voids) {
             try {
                
-                URL url = new URL("https://ngknn.ru:5101/NGKNN/ПетуненковаАП/api/Music");
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection(); //вызываем нашу API
+                URL url = new URL("https://ngknn.ru:5101/NGKNN/ПетуненковаАП/api/Musics");
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                /*
-                BufferedReader успрощает чтение текста из потока символов
-                InputStreamReader преводит поток байтов в поток символов
-                connection.getInputStream() получает поток байтов
-                */
+
                 StringBuilder result = new StringBuilder();
                 String line = "";
 
@@ -73,7 +69,7 @@ public class General extends AppCompatActivity {
                             musicJson.getString("Name"),
                             musicJson.getString("Executor"),
                             musicJson.getString("Genre"),
-                            musicJson.getString("Duration")
+                            musicJson.getString("Duration"),
                             musicJson.getString("Image")
                     );
                     listProduct.add(tempProduct);

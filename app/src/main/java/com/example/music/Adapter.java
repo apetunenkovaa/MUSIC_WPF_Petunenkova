@@ -60,16 +60,29 @@ public class Adapter  extends BaseAdapter {
         TextView Executor = v.findViewById(R.id.tx_Executor);
         TextView Genre = v.findViewById(R.id.tx_Genre);
         TextView Duration = v.findViewById(R.id.tx_Duration);
-        ImageView image = v.findViewById(R.id.image);
+        ImageView Image = v.findViewById(R.id.image);
+
         Mask mask = maskList.get(i);
         Name.setText(mask.getName());
         Executor.setText(mask.getExecutor());
         Genre.setText(mask.getGenre());
         Duration.setText(mask.getDuration());
-        image.setImageBitmap(getUserImage(mask.()));
 
 
-        return v;
+        Image_D DI = new Image_D(mContext);
+        Image.setImageBitmap(DI.getUserImage(mask.getImage()));
+
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, Edit.class);
+                intent.putExtra(Mask.class.getSimpleName(), mask);
+                mContext.startActivity(intent);
+            }
+        });
+
+        return  v;
+
     }
 
 
