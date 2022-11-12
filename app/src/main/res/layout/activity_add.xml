@@ -99,6 +99,8 @@
         android:layout_marginTop="50dp"
         android:onClick="onAdd"
         android:text="Добавить"
+        android:textColor="#FFFFFF"
+        android:background="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Duration" />
@@ -111,6 +113,8 @@
         android:layout_marginTop="50dp"
         android:onClick="onClickBack"
         android:text="Назад"
+        android:textColor="#FFFFFF"
+        android:background="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_add"
         app:layout_constraintTop_toBottomOf="@+id/Duration" />

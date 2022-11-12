@@ -45,6 +45,7 @@
         android:textColor="#B094D1"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:onClick="OnGeneral"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
